@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def create #handle the new creation
     @article = Article.new(article_param) #passando as hashes dos parametros da url para a criação da article nova
+    @article.user = User.first
     if @article.save #se o save do article no banco retornar true, lança a info
       flash[:success] = 'Article was successfully created' #mensagem de sucesso
       redirect_to article_path(@article) # redireciona para article#show path passando o recor(@article)
