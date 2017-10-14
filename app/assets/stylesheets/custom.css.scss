@@ -4,7 +4,7 @@ $navbar-default-bg: #00BFFF;
 @import "bootstrap";
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #eaeaea;  /*Sets the text hover color on navbar*/
+  color: grey;  /*Sets the text hover color on navbar*/
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -20,7 +20,7 @@ $navbar-default-bg: #00BFFF;
   font-weight: bold;
 }
 #logo:hover{
-  color: #eaeaea;
+  color: grey;
   text-decoration: none;
 }
 .article-actions{
