@@ -1,0 +1,26 @@
+<h1 align="center">Listing All Articles</h1>
+<% @articles.each do |article| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="article-title">
+          <%= link_to article.title, article_path(article) %>
+        </div>
+        <div class="article-body">
+          <%= truncate(article.descriptions,length:100) %>
+        </div>
+        <div class="article-actions">
+          <%= link_to edit_article_path(article), :class => 'btn btn-success btn-xs' do %>
+            Edit
+          <% end %>
+          <%= link_to article_path(article), :class => 'btn btn-primary btn-xs' do %>
+            Show
+          <% end %>
+          <%= link_to article_path(article),method: :delete, :class => 'btn btn-danger btn-xs', data:{confirm: "Are you sure you want to delete Article '#{article.title}'?"} do %>
+            Delete
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

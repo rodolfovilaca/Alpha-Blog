@@ -1,0 +1,136 @@
+$navbar-default-bg: #00BFFF;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #eaeaea;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+#logo:hover{
+  color: #eaeaea;
+  text-decoration: none;
+}
+.article-actions{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+.description{
+  margin-top: 0;
+}
+.article-title a:link{
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none !important;
+}
+.article-body{
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.text-white{
+  color: #fff !important;
+}
+.jumbotron{
+  background-size: cover;
+  height: 550px;
+}
+footer{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777
+}
+footer a:hover{
+  color: #222;
+}
+footer small{
+  float: left;
+}
+footer ul{
+  float: right;
+  list-style: none;
+}
+footer ul li{
+  float: left;
+  margin-left: 15px;
+}
+.small-btn{
+  padding: 8px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 11px;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+.medium-btn{
+  padding: 12px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+.big-btn{
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+.btn-blue {
+  background-color: #46C0DC;
+  color: white;
+  border: none;
+}
+
+.btn-blue:hover {
+    background-color: #037D94;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-green{
+  background-color: #61C72B;
+  color: white
+}
+
+.btn-green:hover {
+    background-color: #017123;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-red{
+  background-color: #ED4C48;
+  color: white
+}
+
+.btn-red:hover {
+    background-color: #BF1317;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-round {
+  border-radius: 8px;
+}

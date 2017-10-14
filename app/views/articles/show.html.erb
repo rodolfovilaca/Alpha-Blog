@@ -1,0 +1,17 @@
+<h2 align="center"> <%= @article.title %> </h2><!-- show das informações adquiridas -->
+<div class="well col-xs-12">
+  <h4 class="center description"><strong>Text:</strong></h2>
+  <hr>
+    <%= simple_format(@article.descriptions) %>
+  <div class="article-actions">
+    <%= link_to articles_path, :class => 'btn btn-primary' do%>
+      Articles List
+    <%end%>
+    <%= link_to edit_article_path(@article), :class => 'btn btn-success' do %>
+      Edit
+    <% end %></th>
+    <%= link_to article_path(@article),method: :delete, :class => 'btn btn-danger', data:{confirm: "Are you sure you want to delete Article '#{@article.title}'?"} do %>
+      Delete
+    <% end %></th>
+  </div>
+</div>
