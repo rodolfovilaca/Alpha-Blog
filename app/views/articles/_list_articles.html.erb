@@ -15,17 +15,19 @@
             </small>
           </div>
         </div>
-        <div class="article-actions">
-          <%= link_to edit_article_path(article), :class => 'btn btn-success btn-xs' do %>
-            Edit
-          <% end %>
-          <%= link_to article_path(article), :class => 'btn btn-primary btn-xs' do %>
-            Show
-          <% end %>
-          <%= link_to article_path(article),method: :delete, :class => 'btn btn-danger btn-xs', data:{confirm: "Are you sure you want to delete Article '#{article.title}'?"} do %>
-            Delete
-          <% end %>
-        </div>
+        <% if logged_in? && current_user == article.user %>
+          <div class="article-actions">
+            <%= link_to edit_article_path(article), :class => 'btn btn-success btn-xs' do %>
+              Edit
+            <% end %>
+            <%= link_to article_path(article), :class => 'btn btn-primary btn-xs' do %>
+              Show
+            <% end %>
+            <%= link_to article_path(article),method: :delete, :class => 'btn btn-danger btn-xs', data:{confirm: "Are you sure you want to delete Article '#{article.title}'?"} do %>
+              Delete
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
