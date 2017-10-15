@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, except: [:new, :create, :index]
 
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page:5)
   end
 
   def new #the new action is handled by the create action
@@ -16,8 +16,8 @@ class ArticlesController < ApplicationController
       flash[:success] = 'Article was successfully created' #mensagem de sucesso
       redirect_to article_path(@article) # redireciona para article#show path passando o recor(@article)
     else
-      flash[:success] = 'Article creation failed'
-      redirect_to 'new' #se falhar redireciona a pagina de volta para o articles#new
+      flash[:danger] = 'Article creation failed'
+      render 'new' #se falhar redireciona a pagina de volta para o articles#new
     end
   end
 

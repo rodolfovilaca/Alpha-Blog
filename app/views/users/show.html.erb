@@ -5,4 +5,10 @@
   </div>
 </div>
 <h4 align="center" class="margin-top-30"><%= @user.username %>'s articles</h4>
-<%= render 'articles/list_articles', list: @user.articles %>
+<div align="center">
+  <%= will_paginate @articles %>
+</div>
+<%= render 'articles/list_articles', list: @articles %>
+<div align="center">
+  <%= will_paginate @articles %>
+</div>

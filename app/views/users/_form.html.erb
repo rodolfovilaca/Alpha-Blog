@@ -28,11 +28,11 @@
           <%= f.password_field :password, rows:10, class:"form-control", placeholder:"Enter Password"%>
         </div>
       </div>
-        <div class="form-group">
-          <div class="col-xs-1 col-xs-offset-2">
+        <div align="center" class="form-group">
+          <div class="btns-align">
             <%= f.submit(@user.new_record? ? 'Sign Up' : 'Save', class: "btn btn-primary btn-md")%>
           </div>
-          <div class="col-xs-1">
+          <div class="btns-align">
             <%= link_to "Cancel",:back, class: "btn btn-default btn-ms"%>
           </div>
         </div>
