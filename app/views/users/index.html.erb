@@ -1,0 +1,16 @@
+<h1 align="center"> Users <h1>
+<% @users.each do |user| %>
+  <ul class="listing">
+    <div class="row">
+      <div class="well col-xs-6 col-xs-offset-3">
+        <div align="left" class="col-xs-1">
+          <li><%= link_to gravatar_for(user), user_path(user) %></li>
+        </div>
+        <div class="col-xs-5 col-xs-offset-1">
+          <%= link_to user.username, user_path(user) %>
+          <li class="user-activity"><small><%= pluralize(user.articles.count, "article")+", last seen "+time_ago_in_words(user.articles.last.created_at)+" ago"  if user.articles.present? %></small></li>
+        </div>
+      </div>
+    </div>
+  </ul>
+<% end %>

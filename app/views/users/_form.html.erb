@@ -30,7 +30,7 @@
       </div>
         <div class="form-group">
           <div class="col-xs-1 col-xs-offset-2">
-            <%= f.submit 'Sign Up', class: "btn btn-primary btn-md"%>
+            <%= f.submit(@user.new_record? ? 'Sign Up' : 'Save', class: "btn btn-primary btn-md")%>
           </div>
           <div class="col-xs-1">
             <%= link_to "Cancel",:back, class: "btn btn-default btn-ms"%>
