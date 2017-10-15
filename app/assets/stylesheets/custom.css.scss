@@ -23,13 +23,22 @@ $navbar-default-bg: #00BFFF;
   color: grey;
   text-decoration: none;
 }
+.font-not-underline{
+  text-decoration: none !important;
+}
 .listing{
   list-style: none;
   padding-left: 0;
 }
 .user-activity{
-  align-self: flex-start;
   font-size: 25px;
+  vertical-align: bottom;
+}
+.card{
+  margin-top: 15px;
+}
+.center{
+ align-content: center;
 }
 .margin-top-30{
   margin-top: 30px;
