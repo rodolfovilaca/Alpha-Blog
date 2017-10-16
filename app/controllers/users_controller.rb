@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :set_user, except:[:index,:new,:create]
+  before_action :require_same_user, only:[:edit, :update]
 
   def index
     @users = User.paginate(page: params[:page], per_page:5)
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Account Successfully created, welcome to the Alpha Blog, #{@user.username}."
+      session[:user_id] = @user.id
       redirect_to articles_path
     else
       render 'new'
@@ -46,4 +48,10 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def require_same_user #bloqueia acesso ao usuario se digitar o path na url que nao tem acesso
+      if !logged_in? || current_user != @user
+        flash[:danger] = 'Access Denied.'
+        redirect_to root_path
+      end
+    end
 end
