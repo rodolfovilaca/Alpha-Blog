@@ -22,8 +22,13 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.mysql2
+  adapter: mysql2
+  encoding: utf8
+  database: articles_blog
+  username: root
+  password: p2h2y111991
+  host: 127.0.0.1
+  port: 3306
 
 production:
   <<: *default
