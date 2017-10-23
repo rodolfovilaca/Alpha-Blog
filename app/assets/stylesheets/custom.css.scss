@@ -34,6 +34,9 @@ $navbar-default-bg: #00BFFF;
   list-style: none;
   padding-left: 0;
 }
+.listing-item{
+  text-align: center;
+}
 .user-activity{
   font-size: 25px;
   vertical-align: bottom;
@@ -62,6 +65,7 @@ $navbar-default-bg: #00BFFF;
   font-weight: bold;
   font-size: 1.5em;
   text-decoration: none !important;
+  text-align: center;
 }
 .article-body{
   border-top: 1px solid #eaeaea;

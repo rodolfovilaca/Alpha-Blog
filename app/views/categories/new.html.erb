@@ -1,0 +1,26 @@
+<h1 align="center">Create New Category</h1>
+<div class="col-xs-8 col-xs-offset-2">
+  <%= render "shared/errors", record: @category%>
+</div>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <%= form_for(@category, :html => {class:"form-horizontal", role:"form"}) do |f| %> <!--# formulario para preenchimento e criação da Article -->
+    <div class= "form-group">
+      <div class="control-label col-sm-2">
+        <%= f.label :name %>
+      </div>
+      <div class="col-sm-8">
+        <%= f.text_field :name, class: "form-control", placeholder: "Enter Category", autofocus: true %>
+      </div>
+    </div>
+      <div align="center" class="form-group">
+        <div class="btns-align">
+          <%= f.submit 'Save', class: "btn btn-primary btn-md"%>
+        </div>
+        <div class="btns-align">
+          <%= link_to "Cancel",:back, class: "btn btn-default btn-ms"%>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
