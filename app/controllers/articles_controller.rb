@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_param
-      params.require(:article).permit(:title, :descriptions) #pegando os parametros nas hashes da url
+      params.require(:article).permit(:title, :descriptions, category_ids: []) #pegando os parametros nas hashes da url
     end
 
     def require_same_user #bloqueia a se o usuario digitar o path no hash da url

@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   validates :email, presence:true, uniqueness: {case_sensitive: false}, length: {maximum: 100}, format: { with: VALID_EMAIL_REGEX }
 
   has_secure_password
+
+  def is_admin?
+    return self.admin
+  end
 end

@@ -1,0 +1,8 @@
+<h1 align="center"><%= @category.name.titleize%></h1>
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
+<%= render 'articles/list_articles', list: @category_articles if @category_articles.any? %>
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
